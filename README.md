@@ -1,2 +1,2 @@
 # svelte-tampermonkey
-vite &amp; svelte tampermonkey开发脚手架
+vite+svelte tampermonkey开发脚手架
