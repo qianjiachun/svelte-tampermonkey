@@ -1,7 +1,7 @@
 import { TestA } from "./views"
 
 function init() {
-    return new TestA({
+    new TestA({
         target: document.getElementById('u1')
     })
 }

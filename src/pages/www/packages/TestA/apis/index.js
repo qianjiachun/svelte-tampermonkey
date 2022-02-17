@@ -1,0 +1,1 @@
+// export api here. recommend to use **custom** GM_xmlhttpRequest instead of fetch or native GM_xmlhttpRequest
