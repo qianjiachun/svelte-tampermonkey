@@ -6,7 +6,7 @@
 ## Header
 1. `src/header.txt` can edit tampermonkey header info
 
-## Development
+## Start
 1. `npm install`
 2. `npm run dev`
 3. Copy `dist/main.user.debug.js` to tampermonkey

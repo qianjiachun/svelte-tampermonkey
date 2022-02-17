@@ -6,7 +6,7 @@
 ## Header
 1. `src/header.txt`可修改tampermonkey的信息
 
-## 开发
+## 起步
 1. `npm install`
 2. `npm run dev`
 3. 将`dist/main.user.debug.js`的内容添加到tampermonkey中
