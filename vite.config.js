@@ -13,6 +13,7 @@ export default ({mode}) => {
       header(headerText, mode==="dev")
     ],
     build: {
+      outDir: "dist",
       cssCodeSplit: true,
       minify: false,
       rollupOptions: {
@@ -38,6 +39,9 @@ function header(text, dev=true) {
       if (dev) {
         let index = String(text).lastIndexOf("\n");
         let newText = text.slice(0, index) + `// @require file:///${path.join(__dirname, "/dist/" + FILE_NAME)}` + text.slice(index);
+        if (!fs.existsSync("dist")) {
+          fs.mkdirSync("dist");
+        }
         fs.writeFileSync(path.join(__dirname, "/dist/" + FILE_NAME.replace(".js", ".dev.js")), newText);
       }
     }
