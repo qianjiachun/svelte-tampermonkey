@@ -4,7 +4,7 @@
 **English | [简体中文](README.zh-CN.md)**
 
 ## Header
-1. `src/header.txt` can edit tampermonkey header info
+1. `src/header.js` can edit tampermonkey header info
 
 ## Start
 1. `npm install`

@@ -5,7 +5,8 @@ import fs from 'fs'
 // https://vitejs.dev/config/
 
 const FILE_NAME = "main.user.js";
-const headerText = require("./src/header.txt");
+const headerText = fs.readFileSync("./src/header.js").toString()
+console.log(headerText)
 export default ({mode}) => {
   return defineConfig({
     plugins: [

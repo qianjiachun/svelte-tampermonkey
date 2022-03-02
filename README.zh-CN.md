@@ -4,7 +4,7 @@
 **[English](README.md) | 简体中文**
 
 ## Header
-1. `src/header.txt`可修改tampermonkey的信息
+1. `src/header.js`可修改tampermonkey的信息
 
 ## 起步
 1. `npm install`
