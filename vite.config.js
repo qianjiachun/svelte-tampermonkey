@@ -27,16 +27,16 @@ export default ({mode}) => {
   })
 }
 
-function header(text, debug=true) {
+function header(text, dev=true) {
   return {
     name: "vite-plugin-header",
     generateBundle(OutputOptions, ChunkInfo) {
       let newCode = text + "\n" + ChunkInfo[OutputOptions.entryFileNames].code;
       ChunkInfo[OutputOptions.entryFileNames].code = newCode;
-      if (debug) {
+      if (dev) {
         let index = String(text).lastIndexOf("\n");
         let newText = text.slice(0, index) + `// @require file:///${path.join(__dirname, "/dist/" + FILE_NAME)}` + text.slice(index);
-        fs.writeFileSync(path.join(__dirname, "/dist/" + FILE_NAME.replace(".js", ".debug.js")), newText);
+        fs.writeFileSync(path.join(__dirname, "/dist/" + FILE_NAME.replace(".js", ".dev.js")), newText);
       }
     }
   }

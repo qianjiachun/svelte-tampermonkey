@@ -9,7 +9,7 @@
 ## Start
 1. `npm install`
 2. `npm run dev`
-3. Copy `dist/main.user.debug.js` to tampermonkey
+3. Copy `dist/main.user.dev.js` to tampermonkey
 4. Visit [百度](https://www.baidu.com)，you can see the effect in the upper right corner
    - Every time you modify the code, it will be hot updated. You only need to refresh the page
 

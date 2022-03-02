@@ -9,7 +9,7 @@
 ## 起步
 1. `npm install`
 2. `npm run dev`
-3. 将`dist/main.user.debug.js`的内容添加到tampermonkey中
+3. 将`dist/main.user.dev.js`的内容添加到tampermonkey中
 4. 访问[百度](https://www.baidu.com)，即可在右上角看到效果
    - 每次修改代码会热更新，只需要刷新页面即可
 
