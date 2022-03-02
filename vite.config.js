@@ -6,7 +6,6 @@ import fs from 'fs'
 
 const FILE_NAME = "main.user.js";
 const headerText = fs.readFileSync("./src/header.js").toString()
-console.log(headerText)
 export default ({mode}) => {
   return defineConfig({
     plugins: [
