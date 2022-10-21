@@ -38,7 +38,7 @@ function header(text, dev=true) {
       ChunkInfo[filename].code = newCode;
       if (dev) {
         let index = String(text).lastIndexOf("\n");
-        let newText = text.slice(0, index) + `// @require file:///${path.join(__dirname, "/dist/" + FILE_NAME)}` + text.slice(index);
+        let newText = text.slice(0, index) + `\n// @require file:///${path.join(__dirname, "/dist/" + FILE_NAME)}` + text.slice(index);
         if (!fs.existsSync("dist")) {
           fs.mkdirSync("dist");
         }
