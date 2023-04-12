@@ -1,4 +1,5 @@
-import { TestA } from "./views"
+import { TestA } from "./views";
+import "./styles/index.css";
 
 function init() {
     new TestA({
