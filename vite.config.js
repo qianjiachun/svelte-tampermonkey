@@ -16,13 +16,13 @@ export default ({mode}) => {
       outDir: "dist",
       cssCodeSplit: true,
       minify: false,
-      rollupOptions: {
-        input: "src/main.js",
-        output: {
-          format: 'iife',
-          file: `dist/${FILE_NAME}`,
-          dir: null,
-         },
+      lib: {
+        entry: "src/main.js",
+        formats: ["iife"],
+        fileName: () => {
+          return FILE_NAME;
+        },
+        name: FILE_NAME
       },
       watch: mode === "dev"
     }
@@ -33,7 +33,7 @@ function header(text, dev=true) {
   return {
     name: "vite-plugin-header",
     generateBundle(OutputOptions, ChunkInfo) {
-      let filename =  String(OutputOptions.file).replace("dist/", "");
+      let filename =  String(OutputOptions.name).replace("dist/", "");
       let newCode = text + "\n" + ChunkInfo[filename].code;
       ChunkInfo[filename].code = newCode;
       if (dev) {
